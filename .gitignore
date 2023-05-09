@@ -1,0 +1,49 @@
+# .NET 프로젝트 관련
+## Build 결과
+bin/
+obj/
+
+## Visual Studio 관련
+.vs/
+
+## Visual Studio Code 관련
+.vscode/
+
+## JetBrains Rider 관련
+.idea/
+
+# 패키지 관련
+## NuGet 패키지
+packages/
+
+## Node.js 패키지
+node_modules/
+
+# 사용자 설정
+*.user
+*.suo
+*.userprefs
+
+# 로그 파일
+*.log
+
+# 백업 파일
+*~
+*.bak
+
+# 시스템 생성 파일
+Thumbs.db
+.DS_Store
+
+# 전역 .NET 설정 파일
+global.json
+
+# 테스트 결과
+TestResults/
+
+# 어셈블리 정보 파일
+**/AssemblyInfo.cs
+
+# 기타
+*.swp
+*.swo
