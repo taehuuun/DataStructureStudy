@@ -46,6 +46,36 @@ public class SinglyLinkedList<T>
         // 리스트의 카운트를 증가
         Count++;
     }
+    /// <summary>
+    /// 리스트의 처음에 데이터 노드를 추가 합니다
+    /// </summary>
+    /// <param name="data">추가할 데이터</param>
+    public void AddFirst(T data)
+    {
+        // 데이터를 추가 하기 위한 새로운 노드를 생성
+        Node<T> newNode = new Node<T>(data);
+        
+        // 리스트가 비어있다면 
+        if (Count == 0)
+        {
+            // 새로 추가하는 노드를 헤드 변경
+            _head = newNode;
+        }
+        else
+        {
+            // 기존 헤드 노드를 임시 저장
+            Node<T> headOrigin = _head;
+            
+            //새로 추가되는 노드의 다음 노드를 기존 헤드로 변경
+            newNode.Next = headOrigin;
+
+            // 새로 추가하는 노드를 헤드로 변경
+            _head = newNode;
+        }
+        
+        // 카운트 증가
+        Count++;
+    }
     public override string ToString()
     {
         // 헤드 노드를 임시 변수에 저장
