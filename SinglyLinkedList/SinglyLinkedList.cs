@@ -46,4 +46,22 @@ public class SinglyLinkedList<T>
         // 리스트의 카운트를 증가
         Count++;
     }
+    public override string ToString()
+    {
+        var tmp = _head;
+        string data = "";
+
+        while (tmp != null)
+        {
+            if (!string.IsNullOrEmpty(data))
+            {
+                data += ",";
+            }
+
+            data += tmp.Data?.ToString();
+            tmp = tmp.Next;
+        }
+
+        return data;
+    }
 }
