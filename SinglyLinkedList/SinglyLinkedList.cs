@@ -48,20 +48,29 @@ public class SinglyLinkedList<T>
     }
     public override string ToString()
     {
+        // 헤드 노드를 임시 변수에 저장
         var tmp = _head;
+        
+        // 데이터를 저장할 문자열 변수를 초기화
         string data = "";
-
+        
+        // tmp가 null이 아닐 때까지 반복
         while (tmp != null)
         {
+            // data가 비어있지 않으면 쉼표를 추가
             if (!string.IsNullOrEmpty(data))
             {
                 data += ",";
             }
-
+            
+            // tmp노드의 Data 값을 문자열로 변환, data에 추가
             data += tmp.Data?.ToString();
+            
+            // 다음 노드로 아동
             tmp = tmp.Next;
         }
-
+        
+        // 최종적으로 생성된 문자열 데이터를 반환
         return data;
     }
 }
