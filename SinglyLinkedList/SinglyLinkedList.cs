@@ -1,6 +1,4 @@
-﻿using System.Runtime.CompilerServices;
-
-namespace SinglyLinkedList;
+﻿namespace SinglyLinkedList;
 
 public class SinglyLinkedList<T>
 {
