@@ -151,8 +151,38 @@ public class SinglyLinkedList<T>
             // currentNode를 다음 노드로 설정
             findNode = findNode.Next;
         }
-
+        
         return findNode;
+    }
+    /// <summary>
+    /// 리스트 내에서 특정 노드를 제거 합니다
+    /// </summary>
+    /// <param name="removeNode">제거할 노드</param>
+    public void Remove(Node<T> removeNode)
+    {
+        if (Count == 0)
+        {
+            Console.WriteLine("현재 리스트에서 제거할 노드가 없습니다.");
+            return;
+        }
+        
+        Node<T>? findNode = _head;
+
+        while (findNode.Next != null)
+        {
+            if(findNode.Next == removeNode)
+                break;
+            findNode = findNode.Next;
+        }
+
+        if (findNode == null)
+        {
+            Console.WriteLine("리스트 내에 해당 하는 노드가 없습니다");
+            return;
+        }
+
+        Node<T> removeNodeNextNode = findNode.Next.Next;
+        findNode.Next = removeNodeNextNode;
     }
     public override string ToString()
     {
