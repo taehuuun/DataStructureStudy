@@ -129,6 +129,31 @@ public class SinglyLinkedList<T>
         // 카운트 증가
         Count++;
     }
+
+    /// <summary>
+    /// 특정 데이터와 일치하는 노드를 찾는 기능
+    /// </summary>
+    /// <param name="data">찾을 데이터 값</param>
+    /// <returns>데이터와 일치하는 노드</returns>
+    public Node<T>? Find(T data)
+    {
+        Node<T>? findNode = _head;
+        
+        // currentNode가 null 아니면 반복
+        while (findNode != null)
+        {
+            // EqualityComparer<T>의 Default 속성을 이용하여
+            // currentNode의 Data와 찾으려는 data가 일치하는지 체크후
+            // 일치하면 반복문을 빠져나옴
+            if(EqualityComparer<T>.Default.Equals(findNode.Data,data))
+                break;
+            
+            // currentNode를 다음 노드로 설정
+            findNode = findNode.Next;
+        }
+
+        return findNode;
+    }
     public override string ToString()
     {
         // 헤드 노드를 임시 변수에 저장
