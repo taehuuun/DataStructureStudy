@@ -13,6 +13,15 @@ public class SinglyLinkedList<T>
         Count = 0;
     }
     
+    /*
+     * 패스트 캠퍼스 자료구조 - 연결리스트 실습 구현 함수
+     * - AddLast(T data)
+     * - AddFirst(T data)
+     * - AddAfter(Node<T> node, T data)
+     * - Find(T data)
+     * - Remove(Node<T> removeNode)
+     */
+    
     /// <summary>
     /// 리스트의 마지막에 데이터 노드를 추가 합니다
     /// </summary>
