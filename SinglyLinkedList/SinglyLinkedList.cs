@@ -1,4 +1,6 @@
-﻿namespace SinglyLinkedList;
+﻿using System.Runtime.CompilerServices;
+
+namespace SinglyLinkedList;
 
 public class SinglyLinkedList<T>
 {
@@ -72,6 +74,57 @@ public class SinglyLinkedList<T>
             // 새로 추가하는 노드를 헤드로 변경
             _head = newNode;
         }
+        
+        // 카운트 증가
+        Count++;
+    }
+    /// <summary>
+    /// 특정 노드 뒤에 데이터를 추가 합니다
+    /// </summary>
+    /// <param name="node">뒤에 추가할 특정 노드</param>
+    /// <param name="data">추가할 데이터</param>
+    public void AddAfter(Node<T> node, T data)
+    {
+        // 리스트의 추가된 노드의 카운트가 0일 경우 리턴
+        if (Count == 0)
+        {
+            Console.WriteLine("현재 리스트의 추가된 노드가 없습니다.");
+            return;
+        }
+        
+        // currentNode를 헤드로 설정
+        Node<T>? currentNode = _head;
+        
+        // currentNode가 null 아니면 반복
+        while (currentNode != null)
+        {
+            // currentNode와 node가 일치하면 탈출
+            if(currentNode == node)
+                break;
+            
+            // currentNode를 다음 노드로 설정
+            currentNode = currentNode.Next;
+        }
+        
+        // 체크 후 currentNode가 null 일경우
+        // 리스트에는 node와 일치하는 node가 없기에 리턴
+        if (currentNode == null)
+        {
+            Console.WriteLine("뒤에 추가하고자 하는 노드가 존재 하지 않음");
+            return;
+        }
+        
+        // 데이터를 추가하기 위한 새로운 노드를 생성
+        Node<T> newNode = new Node<T>(data);
+        
+        // currentNode의 다음 노드를 currentNextNode에 저장
+        Node<T> currentNextNode = currentNode.Next;
+        
+        // currentNode의 다음 노드는 newNode로 설정
+        currentNode.Next = newNode;
+        
+        // newNode의 다음 노드는 currentNextNode로 설정
+        newNode.Next = currentNextNode;
         
         // 카운트 증가
         Count++;
