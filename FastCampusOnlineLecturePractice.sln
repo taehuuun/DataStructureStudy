@@ -1,0 +1,21 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SinglyLinkedList", "DataStructure\SinglyLinkedList\SinglyLinkedList.csproj", "{0E429428-1EDB-4F36-BD1A-F268D10758CF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataStructure", "DataStructure", "{37AF2DCC-2637-4B8E-B8AB-31D4C2C1894F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0E429428-1EDB-4F36-BD1A-F268D10758CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E429428-1EDB-4F36-BD1A-F268D10758CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E429428-1EDB-4F36-BD1A-F268D10758CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E429428-1EDB-4F36-BD1A-F268D10758CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0E429428-1EDB-4F36-BD1A-F268D10758CF} = {37AF2DCC-2637-4B8E-B8AB-31D4C2C1894F}
+	EndGlobalSection
+EndGlobal
